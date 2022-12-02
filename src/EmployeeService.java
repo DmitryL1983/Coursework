@@ -23,7 +23,7 @@ public class EmployeeService {
         for (int i = 0; i < employee.length; i++) {
             if (employee[i] != null) {
                 if (employee[i].getSalary() == minSalary) {
-                    System.out.println("У сотрудника по фамилии: " + employee[i].lastName + ". Самая низкая зарплата ");
+                    System.out.println("У сотрудника по фамилии: " + employee[i].lastName + " самая низкая зарплата ");
                 }
             }
         }
@@ -42,7 +42,7 @@ public class EmployeeService {
         for (int i = 0; i < employee.length; i++) {
             if (employee[i] != null) {
                 if (employee[i].getSalary() == maxSalary) {
-                    System.out.println("У сотрудника по фамилии: " + employee[i].lastName + ". Самая высокая зарплата ");
+                    System.out.println("У сотрудника по фамилии: " + employee[i].lastName + " самая высокая зарплата ");
                 }
             }
         }
