@@ -1,13 +1,13 @@
 public class Main {
 
-    public static void printSeparator() {
+    public static void printSeparator() { //Разделитель строк
         System.out.println("=====================================================================================================");
     }
     public static void main(String[] args) {
 
         EmployeeService employeeService = new EmployeeService();
 
-        Employee[] employee = new Employee[10];
+        Employee[] employee = new Employee[10]; // БД сотрудников
         employee[0] = new Employee("Иван", "Иванович", "Иванов", 1, 36000);
         employee[1] = new Employee("Петр", "Петрович", "Петров", 1, 40000);
         employee[2] = new Employee("Антон", "Антонович", "Антонов", 2, 40000);

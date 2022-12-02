@@ -11,7 +11,7 @@ public class EmployeeService {
         return sum;
     }
 
-    public double calculateMinSum(Employee[] employee) {
+    public double calculateMinSum(Employee[] employee) { // Находим сотрудника с минимальной зарплатой
         double minSalary = employee[0].getSalary();
         for (int i = 0; i < employee.length; i++) {
             if (employee[i] != null) {
@@ -30,7 +30,7 @@ public class EmployeeService {
         return minSalary;
     }
 
-    public double calculateMaxSum(Employee[] employee) {
+    public double calculateMaxSum(Employee[] employee) { // Находим сотрудника с максимальной зарплатой
         double maxSalary = employee[0].getSalary();
         for (int i = 0; i < employee.length; i++) {
             if (employee[i] != null) {
