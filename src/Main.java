@@ -5,7 +5,7 @@ public class Main {
     }
     public static void main(String[] args) {
 
-        EmployeeService employerService = new EmployeeService();
+        EmployeeService employeeService = new EmployeeService();
 
         Employee[] employee = new Employee[10];
         employee[0] = new Employee("Иван", "Иванович", "Иванов", 1, 36000);
@@ -24,13 +24,13 @@ public class Main {
             System.out.println(i);
             printSeparator();
         }
-        System.out.println("Сумма затрат на зарплаты сотрудников за месяц: " + employerService.calculateTotalSum(employee) + " рублей");
+        System.out.println("Сумма затрат на зарплаты сотрудников за месяц: " + employeeService.calculateTotalSum(employee) + " рублей");
         printSeparator();
-        System.out.println(employerService.calculateMinSum(employee) + " рублей");
+        System.out.println(employeeService.calculateMinSum(employee) + " рублей");
         printSeparator();
-        System.out.println(employerService.calculateMaxSum(employee) + " рублей");
+        System.out.println(employeeService.calculateMaxSum(employee) + " рублей");
         printSeparator();
-        System.out.println("Среднее значение зарплат: " + employerService.calculateTotalSum(employee)/employee.length + " рублей");
+        System.out.println("Среднее значение зарплат: " + employeeService.calculateTotalSum(employee)/employee.length + " рублей");
         printSeparator();
     }
 }
