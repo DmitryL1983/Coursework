@@ -43,6 +43,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "таб. номер " + getId() + '\t' + "ФИО: " + getEmployeeName() + '\t' + "Отдел: " +getDepart() + '\t' +"Начислено з/п: " +getSalary() + " рублей";
+      //  return "таб. номер " + getId() + '\t' + "ФИО: " + getEmployeeName() + '\t' + "Отдел: " +getDepart() + '\t' +"Начислено з/п: " +getSalary() + " рублей";
+        return "ФИО: " + getEmployeeName();
     }
 }
