@@ -9,7 +9,7 @@ public class Main {
 
         Employee[] employee = new Employee[10]; // БД сотрудников
         employee[0] = new Employee("Иван", "Иванович", "Иванов", 1, 36000);
-        employee[1] = new Employee("Петр", "Петрович", "Петров", 1, 40000);
+        employee[1] = new Employee("Петр", "Петрович", "Петров", 1, 0000);
         employee[2] = new Employee("Антон", "Антонович", "Антонов", 2, 40000);
         employee[3] = new Employee("Борис", "Борисович", "Борисов", 2, 45000);
         employee[4] = new Employee("Владимир", "Владимирович", "Владимиров", 3, 55000);
@@ -30,7 +30,8 @@ public class Main {
         printSeparator();
         System.out.println(employeeService.calculateMaxSum(employee) + " рублей");
         printSeparator();
-        System.out.println("Среднее значение зарплат: " + employeeService.calculateTotalSum(employee)/employee.length + " рублей");
+        System.out.println("Количество сотрудников с начисленной зарплатой " + employeeService.notZeroSalaries(employee) + "человек");
+        System.out.println("Среднее значение зарплат: " + Math.round(employeeService.calculateTotalSum(employee)/employeeService.notZeroSalaries(employee)) + " рублей");
         printSeparator();
     }
 }

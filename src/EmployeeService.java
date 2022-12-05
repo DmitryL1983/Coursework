@@ -1,7 +1,7 @@
 public class EmployeeService {
     public Employee[] employee = new Employee[10];
 
-    public double calculateTotalSum(Employee[] employee) {
+    public double calculateTotalSum(Employee[] employee) { // находим общую сумму затрат на з/п
         double sum = employee[0].getSalary();
         for (int i = 0; i < employee.length; i++) {
             if (employee[i] != null) {
@@ -10,11 +10,19 @@ public class EmployeeService {
         }
         return sum;
     }
-
+    public int notZeroSalaries(Employee[] employee) { // находим сотрудников с не нулевой зарплатой
+        int notZeroSalaries = 0;
+        for (int i = 0; i < employee.length; i++) {
+            if (employee[i].getSalary() !=0) {
+                notZeroSalaries = notZeroSalaries + 1;
+            }
+        }
+        return notZeroSalaries;
+    }
     public double calculateMinSum(Employee[] employee) { // Находим сотрудника с минимальной зарплатой
         double minSalary = employee[0].getSalary();
         for (int i = 0; i < employee.length; i++) {
-            if (employee[i] != null) {
+            if (employee[i] != null && employee[i].getSalary() > 0) {
                 if (minSalary > employee[i].getSalary()) {
                     minSalary = employee[i].getSalary();
                 }
